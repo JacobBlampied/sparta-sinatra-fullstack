@@ -6,10 +6,11 @@ create table cars (
 	id INT,
 	make VARCHAR(50),
 	model VARCHAR(50),
-	year VARCHAR(50)
+	year VARCHAR(50),
+  user_id int REFERENCES user(id)
 );
 
-users (
+create table users (
 	id INT,
 	name VARCHAR(50),
 	job VARCHAR(50),

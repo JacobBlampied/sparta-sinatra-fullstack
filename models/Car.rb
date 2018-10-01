@@ -33,7 +33,7 @@ class Car
 
   end
 
-  def self.all_with_director
+  def self.all_with_user
     conn = self.open_conection
     sql = "SELECT cars.id, cars.make, cars.model, cars.year, cars.user_id, users.id, users.name, FROM cars JOIN users ON cars.user_id = user.id"
     results = conn.exec(sql)
@@ -58,7 +58,7 @@ class Car
 
   end
 
-  def self.find_with_director id
+  def self.find_with_user id
 
     conn = self.open_conection
 
