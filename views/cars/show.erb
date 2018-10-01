@@ -1,0 +1,11 @@
+<small><a href="/cars">Back</a></small>
+<small><a href="/cars/<%= @car.id %>/edit">Edit</a></small>
+
+<h1><%= @car.make %></h1>
+<h2><%= @car.model %></h2>
+<h2><%= @car.year %></h2>
+
+<form class="" action="/cars/<%= @car.id %>" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete">
+</form>

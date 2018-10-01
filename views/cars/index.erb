@@ -1,0 +1,23 @@
+<h1>Index Page</h1>
+
+<table class="table">
+  <thead>
+    <th>ID</th>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Year</th>
+    <th>User Name</th>
+  </thead>
+  <tbody>
+    <% @cars.each do |car| %>
+      <tr>
+        <td><%= car.id %></td>
+        <td><a href="/cars/<%= car.id %>"><%= car.make %></a></td>
+        <td><a href="/cars/<%= car.id %>"><%= car.model %></td>
+        <td><%= car.year %></td>
+        <td><a href="/users/<%= car.user_id %>"><%= car.name %></a></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>

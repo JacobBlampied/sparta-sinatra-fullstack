@@ -1,0 +1,11 @@
+<small><a href="/users">Back</a></small>
+<small><a href="/users/<%= @user.id %>/edit">Edit</a></small>
+
+<h1><%= @user.name %></h1>
+<h2><%= @user.job %></h2>
+<h2><%= @user.phone %></h2>
+
+<form class="" action="/users/<%= @user.id %>" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete">
+</form>

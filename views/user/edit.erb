@@ -1,0 +1,23 @@
+<form action="/users/<%= @user.id %>" method="POST">
+
+  <div class="form-group">
+    <label for="exampleInputName">Name</label>
+    <input type="text" class="form-control" placeholder="Name" name="name" value="<%= @user.name %>">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputJob">Job</label>
+    <input type="text" class="form-control" placeholder="Job" name="job" value="<%= @user.job %>">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPhone">Phone</label>
+    <input type="text" class="form-control" placeholder="Phone" name="phone" value="<%= @user.phone %>">
+  </div>
+
+  <button type="submit" class="btn btn-default" value="PUT">Submit</button>
+
+  <% if (@user.id != '') %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
+</form>
